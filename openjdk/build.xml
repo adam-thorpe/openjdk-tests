@@ -134,9 +134,9 @@
 						</exec>
 					</then>
 					<else>
-						<echo message="git clone --depth 1 -q -b openj9 ${regressionRepo}" />
+						<echo message="git clone --depth 1 -q -b 1597-AsyncCloseAndInterrupt ${regressionRepo}" />
 						<exec executable="git" failonerror="true">
-							<arg line="clone --depth 1 -q -b openj9 ${regressionRepo}" />
+							<arg line="clone --depth 1 -q -b 1597-AsyncCloseAndInterrupt ${regressionRepo}" />
 						</exec>
 						<move file="${jdkName}" tofile="openjdk-jdk"/>
 					</else>
