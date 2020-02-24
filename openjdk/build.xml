@@ -69,7 +69,7 @@
 						<property name="jdkName" value="openj9-openjdk-jdk${JDK_VERSION}" />
 					</else>
 				</if>
-				<property name="regressionRepo" value="https://github.com/ibmruntimes/${jdkName}.git" />
+				<property name="regressionRepo" value="https://github.com/adam-thorpe/${jdkName}.git" />
 			</then>
 			<else>
 				<if>
@@ -134,9 +134,9 @@
 						</exec>
 					</then>
 					<else>
-						<echo message="git clone --depth 1 -q ${defaultBranch} ${regressionRepo}" />
+						<echo message="git clone --depth 1 -q -b openj9 ${regressionRepo}" />
 						<exec executable="git" failonerror="true">
-							<arg line="clone --depth 1 -q ${defaultBranch} ${regressionRepo}" />
+							<arg line="clone --depth 1 -q -b openj9 ${regressionRepo}" />
 						</exec>
 						<move file="${jdkName}" tofile="openjdk-jdk"/>
 					</else>
